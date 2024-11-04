@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permainan Ular - Menu Utama</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu-container">
+        <h1>🐍 Permainan Ular</h1>
+        <p>Pilih tingkat kesulitan dan mulai permainan!</p>
+        <div class="button-container">
+            <br> <button onclick="startGame()" class="btn">Mulai Permainan</button> </br>
+            <br> <button onclick="setDifficulty('easy')" class="btn">Tingkat Kesulitan: Mudah</button> </br>
+            <br> <button onclick="setDifficulty('medium')" class="btn">Tingkat Kesulitan: Sedang</button> </br>
+            <br> <button onclick="setDifficulty('hard')" class="btn">Tingkat Kesulitan: Sulit</button> </br>
+            <br> <button onclick="showScores()" class="btn">Lihat Skor Tertinggi</button> </br>
+        </div>
+    </div>
+
+    <script>
+        function startGame() {
+            window.location.href = "play.html";
+        }
+
+        function setDifficulty(level) {
+            const speeds = { easy: 150, medium: 100, hard: 50 };
+            localStorage.setItem("snakeDifficulty", speeds[level]);
+            alert(`Tingkat kesulitan diatur ke ${level}`);
+        }
+
+        function showScores() {
+            const scores = JSON.parse(localStorage.getItem("snakeScores") || "[]");
+            if (scores.length === 0) {
+                alert("Belum ada skor.");
+            } else {
+                alert("Skor Tertinggi:\n" + scores.join("\n"));
+            }
+        }
+    </script>
+</body>
+</html>

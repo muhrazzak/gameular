@@ -1,0 +1,174 @@
+/* Reset dan Aturan Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #282c34;
+    font-family: Arial, sans-serif;
+    color: #f4f4f9;
+}
+
+/* Gaya Umum Kontainer */
+.menu-container, .game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+/* Gaya untuk Judul dan Teks */
+h1 {
+    font-size: 28px;
+    color: #f0db4f;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #e0e0e0;
+}
+
+#scoreContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #f4f4f9;
+}
+
+#liveScore {
+    font-weight: bold;
+    color: #f0db4f;
+}
+
+/* Gaya untuk Kanvas Permainan */
+canvas#gameCanvas {
+    background-color: #000;
+    border: 2px solid #333;
+    margin-top: 10px;
+}
+
+/* Gaya untuk Tombol */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0db4f;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+    max-width: 200px;
+    margin: 5px 0;
+}
+
+.btn:hover {
+    background-color: #d4b72f;
+    transform: scale(1.05); /* Animasi zoom saat hover */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Memposisikan tombol secara horizontal */
+    margin: 20px 0; /* Margin vertikal untuk spasi antara tombol */
+    width: 100%; /* Pastikan container memanfaatkan seluruh lebar */
+}
+
+.btn {
+    flex: 1; /* Mengizinkan tombol mengambil ruang yang sama */
+    margin: 0 5px; /* Memberikan spasi antar tombol */
+    padding: 10px; /* Memperbesar area klik tombol */
+    font-size: 16px; /* Ukuran teks tombol */
+}
+
+/* Gaya untuk Daftar Skor */
+#scoreList h2 {
+    margin-bottom: 10px;
+    color: #f0db4f;
+}
+
+.score-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.score-list li {
+    background-color: #444;
+    color: #f4f4f9;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Gaya Tambahan untuk Bagian Game */
+#game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.score-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #444;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    color: #f4f4f9;
+}
+
+.score-box span {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#liveScore {
+    font-size: 20px;
+    color: #f0db4f;
+    margin-top: 5px;
+}
+
+.score-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 10px;
+}
+
+.high-low-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    color: #f4f4f9;
+}
+
+.high-low-score span {
+    margin-top: 4px;
+    color: #f0db4f;
+}
